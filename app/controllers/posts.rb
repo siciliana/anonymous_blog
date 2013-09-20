@@ -3,13 +3,14 @@
 
 # Show me a particular post
 
-get '/post' do
-  erb :post
+get '/post/:id' do
+  erb :_post_row
 end 
 
 # Show me all posts
 
 get '/posts' do
+  @posts = Post.all 
   erb :posts
 end 
 
@@ -32,6 +33,7 @@ end
 
 # Create a new post
 post '/post' do 
-  #enter stuff here 
-  erb :posts
+  
+  @new_post = Post.create(params[:post])
+  redirect to ('/posts')
 end 

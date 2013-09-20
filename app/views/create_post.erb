@@ -1,0 +1,21 @@
+<!-- create post form here --> 
+
+<div class="container">
+  <h1>Create Blog Post</h1>
+  <p>Blogs Away!</p>
+
+  <form method="POST" action="/post">
+    Post title: <input type="text" name="post[title]">
+    <p><br></p>
+    <textarea name="post[body]" rows="10" cols="50">Write shit.</textarea>
+    <p><br></p>
+
+    <input type="text" name="post[tags]">
+    <input type="submit" value="Commit!">
+    <p><br></p>
+
+  </form>
+
+</div>
+
+
